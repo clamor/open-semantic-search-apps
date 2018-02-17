@@ -184,7 +184,7 @@ def search(query, filterquery=None, operator='AND', stemmers=[]):
 	for stemmer in stemmers:
 	
 		# todo: read Solr URI from config
-                solr_url = os.getenv('OSS_SOLR_URL', default='http://localhost:8983/solr/')
+		solr_url = os.getenv('OSS_SOLR_URL', default='http://localhost:8983/solr/')
 		uri = solr_url + 'core1/select?df=' + stemmer +'&q.op=' + operator + '&wt=json&deftype=edismax&fl=id&limit=1000000&hl=true&hl.snippets=1000&hl.fragsize=1&hl.fl=' + stemmer
 		uri += '&q=' + urllib.parse.quote( query )
 	
