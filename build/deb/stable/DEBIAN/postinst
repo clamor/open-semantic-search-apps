@@ -27,9 +27,9 @@ chmod o-r /var/lib/opensemanticsearch/db.sqlite3
 a2enmod wsgi
 
 # reload apache configs to enable our additional apache settings
-service apache2 restart
+# service apache2 restart
 
 # load our cron table
-service cron restart
+# service cron restart
 
 exit 0
